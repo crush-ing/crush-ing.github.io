@@ -80,7 +80,7 @@ body {
   section {
     /*BACKGROUND*/
     background: #000
-      url(https://cdn.discordapp.com/attachments/925558828777472021/979185150334210048/wallblack.png);
+      url(/assets/backgrounds/bg-main.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,7 +111,7 @@ body {
   .garden-section {
     /*BACKGROUND*/
     background: #ffffcf
-      url(https://textures.neocities.org/textures/paper-and-sponge/Sunflower_Bkgrd.jpg);
+      url(/assets/backgrounds/bg-journal-garden.jpg);
     background-attachment: fixed;
     background-repeat: repeat;
     /*FONT*/
@@ -138,7 +138,7 @@ body {
   .sumo-section {
     /*BACKGROUND*/
     background: #f9eadf
-      url(https://cdn.discordapp.com/attachments/925558828777472021/984509374645014528/fiber.png);
+      url(/assets/backgrounds/bg-sumo.png);
     background-attachment: fixed;
     background-repeat: repeat;
     /*FONT*/
