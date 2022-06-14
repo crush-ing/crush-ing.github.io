@@ -1,3 +1,3 @@
-# 1ksrw.github.io
+# CRUSHING
 
-https://1ksrw.github.io/
+https://crush-ing.github.io/
