@@ -445,6 +445,14 @@ span[data-spell]:hover::after {
 /* ------- MOBILE ------- */
 
 @media only screen and (min-device-width: 100px) and (max-device-width: 1440px) {
+  table.dalitable {
+  width: 100%;
+  }
+  table.pyrtable {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  }
   .page {
     margin-top: 10vh;
     width: 85vw;
