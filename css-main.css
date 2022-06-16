@@ -170,6 +170,14 @@ section#home {
   text-shadow: 0 0 2px rgb(121, 163, 96, 0.7);
 }
 
+.petz-section {
+  /*BACKGROUND*/
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("assets/backgrounds/bg-paw-print.jpg");
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
 .sumo-section {
   /*BACKGROUND*/
   background: #f9eadf
