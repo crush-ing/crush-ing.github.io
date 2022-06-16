@@ -173,7 +173,7 @@ section#home {
 .petz-section {
   /*BACKGROUND*/
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("assets/backgrounds/bg-paw-print.jpg");
+    url("assets/backgrounds/bg-paw-print.png");
   background-attachment: fixed;
   background-repeat: repeat;
 }
