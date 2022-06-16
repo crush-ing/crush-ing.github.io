@@ -166,12 +166,17 @@ section#home {
   border-radius: 10px;
   max-width: 100%;
 }
-.garden-section a {
+/* .garden-section a {
   color: rgb(144, 160, 134);
 }
 .garden-section a:hover {
   color: transparent;
   text-shadow: 0 0 2px rgb(121, 163, 96, 0.7);
+} */
+.garden-section h1 {
+  font-size: 35px;
+  margin-top: -12px;
+  color: #000;
 }
 
 .petz-section {
