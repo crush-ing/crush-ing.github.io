@@ -1,4 +1,0 @@
-AuthName "restricted"
-AuthType Basic
-AuthUserFile testpage/.htpasswd
-Require valid-user
