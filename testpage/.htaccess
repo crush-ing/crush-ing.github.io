@@ -1,0 +1,4 @@
+AuthName "testpage"
+AuthType Basic
+AuthUserFile /.htpasswd
+Require valid-user 
