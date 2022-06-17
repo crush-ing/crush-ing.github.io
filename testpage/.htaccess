@@ -1,4 +1,4 @@
-AuthName "testpage"
+AuthName "restricted"
 AuthType Basic
-AuthUserFile /.htpasswd
-Require valid-user 
+AuthUserFile testpage/.htpasswd
+Require valid-user
