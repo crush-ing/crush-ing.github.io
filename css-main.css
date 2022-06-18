@@ -149,8 +149,8 @@ section#home {
 
 .music-section {
   /*BACKGROUND*/
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("assets/backgrounds/bg-marble.png");
+  background: #000
+    url("assets/backgrounds/bg-marble-dark.png");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -190,8 +190,8 @@ section#home {
 
 .petz-section {
   /*BACKGROUND*/
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("assets/backgrounds/bg-paw-print.png");
+  background: #000
+    url("assets/backgrounds/bg-paw-print-dark.png");
   background-attachment: fixed;
   background-repeat: repeat;
 }
