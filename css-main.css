@@ -105,7 +105,7 @@ th {
 section {
   /*BACKGROUND*/
   background: #000
-    url("assets/backgrounds/bg-main.png");
+    url("assets/backgrounds/bg-main.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,7 +136,7 @@ section#home {
 .music-section {
   /*BACKGROUND*/
   background: #000
-    url("assets/backgrounds/bg-marble-dark.png");
+    url("assets/backgrounds/bg-marble-dark.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -145,7 +145,7 @@ section#home {
 .garden-section {
   /*BACKGROUND*/
   background: #ffffcf
-    url("assets/backgrounds/bg-journal-garden.png");
+    url("assets/backgrounds/bg-journal-garden.jpg");
   background-attachment: fixed;
   background-repeat: repeat;
   /*FONT*/
@@ -179,15 +179,16 @@ section#home {
 .petz-section {
   /*BACKGROUND*/
   background: #000
-    url("assets/backgrounds/bg-paw-print-dark.png");
+    url("assets/backgrounds/bg-paw-print-dark.jpg");
   background-attachment: fixed;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .sumo-section {
   /*BACKGROUND*/
   background: #f9eadf
-    url("assets/backgrounds/bg-sumo.png");
+    url("assets/backgrounds/bg-sumo.jpg");
   background-attachment: fixed;
   background-repeat: repeat;
   /*FONT*/
@@ -209,7 +210,7 @@ section#home {
 
 .purgatory-section {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), 
-    url("https://64.media.tumblr.com/ce835da0f092fd125af106257c9bf41b/1d6a2362372e797e-37/s2048x3072/6dcf50dc7fa1347a9952a171088a74eee69b3caf.png");
+    url("https://64.media.tumblr.com/ce835da0f092fd125af106257c9bf41b/1d6a2362372e797e-37/s2048x3072/6dcf50dc7fa1347a9952a171088a74eee69b3caf.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   text-shadow: 2px 2px 8px #000;
