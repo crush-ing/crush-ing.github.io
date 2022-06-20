@@ -208,23 +208,6 @@ section#home {
   background-size: cover;
 }
 
-.purgatory-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), 
-    url("assets/bg-hell-dark.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-shadow: 2px 2px 8px #000;
-}
-
-.purgatory-section a {
-  color: rgb(255, 0, 0);
-}
-
-.purgatory-section a:hover {
-  color: transparent;
-  text-shadow: 0 0 2px rgba(255, 0, 0, 0.7);
-}
-
 /* ------- PAGES ------- */
 
 .page {
