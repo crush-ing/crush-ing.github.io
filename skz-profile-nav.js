@@ -1,6 +1,3 @@
-document.write('<a href="https://cutt.ly/IKysPhF" target="_blank">#STRAYKIDS</a> ');
-document.write('<a href="https://cutt.ly/FKysCO7" target="_blank">#스트레이키즈</a> ');
-document.write('<a href="https://cutt.ly/bKysLeQ" target="_blank">#ストレイキッズ</a><br><br>');
 document.write('<a href="#bangchan"><img style="width:90px;" loading="lazy" src="assets/skz/profiles/profile-1-bang-chan-pic.png"></a>');
 document.write('<a href="#leeknow"><img style="width:90px;" loading="lazy" src="assets/skz/profiles/profile-2-lee-know-pic.png"></a>');
 document.write('<a href="#changbin"><img style="width:90px;" loading="lazy" src="assets/skz/profiles/profile-3-changbin-pic.png"></a>');
