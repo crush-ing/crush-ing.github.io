@@ -1,13 +1,3 @@
-/*
-
-.class {
-}
-
-#id {
-}
-
-*/
-
 /* ------- GENERAL ------- */
 
 body {
@@ -158,7 +148,7 @@ section#home {
 }
 
 .garden-section img {
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 /* .garden-section a {
@@ -210,20 +200,6 @@ section#home {
 
 /* ------- PAGES ------- */
 
-.page {
-  text-align: left;
-  width: 40vw;
-  padding: 1em;
-  margin: auto;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-}
-
-.page img {
-  max-width: 100%;
-  height: auto;
-}
-
 #showroom-page {
   text-align:center;
 }
@@ -236,21 +212,8 @@ section#home {
   display: flex;
   flex-wrap: wrap;
   position: fixed;
-  width: 50px;
-  height: 50px;
-  background: transparent;
-  padding: 5px;
-  margin-top: 0px;
-  margin-left: 10px;
-}
-
-#nav a {
-  color: #cd1633;
-  margin-top: -10px;
-}
-#nav a:hover {
-  color: transparent;
-  text-shadow: 0 0 2px rgba(255, 0, 0, 0.7);
+  padding-top: .2rem;
+  padding-left: 1.5rem;
 }
 
 /* ------- IMAGES ------- */
@@ -280,10 +243,6 @@ section#home {
   max-width: 100%;
 }
 
-.smallimg img {
-  height: 280px;
-}
-
 /* ------- LIGHTBOX ------- */
 
 .lightbox {
@@ -308,6 +267,7 @@ section#home {
 .lightbox img {
   z-index: 4;
   max-height: 100vh;
+  max-width: 100vw;
 }
 
 .lightbox:target:after {
@@ -424,69 +384,67 @@ span[data-spell]:hover::after {
   display: none;
 }
 
+/* ----- PROFILES ----- */
+
+.profile-grid {
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+   'one'
+   'two'
+   'three'
+   'four';
+
+  padding-block: 1.5rem;
+  width: min(100%, 55rem);
+  margin-inline: auto;
+}
+
+.smalltext {
+  font-size: .7em;
+}
+
+.profile-grid img {
+  display: block;
+  margin: auto;
+  object-fit: contain;
+  object-position: top;
+}
+
+.profile:nth-child(1) {
+  grid-area: one;
+}
+.profile:nth-child(2) {
+  grid-area: two;
+}
+
+@media screen and (min-width: 800px) {
+  .profile-grid {
+      grid-template-areas:
+      "one two";
+  }
+}
+
 /* ------- MOBILE ------- */
 
-@media only screen and (min-device-width: 100px) and (max-device-width: 1440px) {
-  table.dalitable {
-  width: 100%;
-  }
-  table.pyrtable {
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  }
+@media only screen and (min-width: 200px){
   .page {
-    margin-top: 10vh;
-    width: 85vw;
+  margin: auto;
+  width: 50vw;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   }
-  .page img {
-    max-width: 85vw;
-    margin: auto;
-  }
-  section img {
-    max-width: 90vw;
-    margin: auto;
-  }
-  .column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-  }
-  .lightbox img {
-    max-width: 100vw;
-    z-index: 4;
-  }
-  .smallimg img {
+  img {
+  max-width: 100%;
   height: auto;
-  width: 100%;
-  }
-  #artgallery {
-    display: inline-block;
-    width: 700px;
-    margin-left: -10px;
-  }
-  #artgallery img {
-    width: 85vw;
-  }
-  #musicgallery {
-    display: inline-block;
-    width: 620px;
-    margin-left: -10px;
   }
   #musicgallery img {
-    width: 85vw;
-  }
-  #floatleft,
-  #floatright {
-    float: none;
-    display: block;
-    padding-bottom: 20px;
-  }
-  #nav {
-    margin-top: 5px;
-    margin-left: 10px;
-  }
-  #nav a {
-    margin-left: 2px;
+  margin-bottom: 5px;}
+}
+
+@media only screen and (max-width: 1500px){
+  .page {
+  width: 85vw;
   }
 }
