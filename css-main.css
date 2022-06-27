@@ -192,7 +192,7 @@ section#home {
 .skz-section {
   /*BACKGROUND*/
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-    url("https://pbs.twimg.com/media/FS2PyhrVIAI903y?format=jpg&name=4096x4096");
+    url("assets/backgrounds/bg-skz.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
