@@ -474,9 +474,10 @@ span[data-spell]:hover::after {
     margin-left: -10px;
   }
   #musicgallery img {
-    width: 85vw;
+    width: 86vw;
   }
   #musicgallery .column {
     padding-bottom: 50px;
+    width: 86vw;
   }
 }
