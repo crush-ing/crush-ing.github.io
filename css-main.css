@@ -438,7 +438,8 @@ span[data-spell]:hover::after {
   height: auto;
   }
   #musicgallery img {
-  margin-bottom: 5px;}
+  margin-bottom: 5px;
+  }
 }
 
 @media only screen and (max-width: 1500px){
