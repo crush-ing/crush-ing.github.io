@@ -417,6 +417,34 @@ span[data-spell]:hover::after {
   grid-area: two;
 }
 
+/* ------- MOBILE ------- */
+
+@media only screen and (min-width: 200px) {
+  .page {
+    margin: auto;
+    width: 50vw;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+    #musicgallery img {
+    margin-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+    #floatright,
+    #floatleft {
+      display: block;
+      float: none;
+      margin: auto;
+      padding-bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .profile-grid {
       grid-template-areas:
@@ -424,26 +452,8 @@ span[data-spell]:hover::after {
   }
 }
 
-/* ------- MOBILE ------- */
-
-@media only screen and (min-width: 200px){
-  .page {
-  margin: auto;
-  width: 50vw;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
-  }
-  img {
-  max-width: 100%;
-  height: auto;
-  }
-  #musicgallery img {
-  margin-bottom: 5px;
-  }
-}
-
-@media only screen and (max-width: 1500px){
-  .page {
-  width: 85vw;
+@media only screen and (max-width: 1500px) {
+    .page {
+    width: 85vw;
   }
 }
