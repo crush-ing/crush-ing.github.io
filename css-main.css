@@ -423,11 +423,11 @@ span[data-spell]:hover::after {
 
 /* ------- MOBILE ------- */
 
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 100px) {
   .page {
     margin: auto;
     width: 50vw;
-    padding-top: 5rem;
+    padding-top: 4rem;
     padding-bottom: 3rem;
   }
   img {
@@ -436,26 +436,30 @@ span[data-spell]:hover::after {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 750px) {
   #floatright,
   #floatleft {
-      display: block;
-      float: none;
-      margin: auto;
-      padding-bottom: 10px;
+    display: block;
+    float: none;
+    margin: auto;
+    padding-bottom: 10px;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
+  .page {
+    width: 50vw;
+  }
   .profile-grid {
-      grid-template-areas:
-      "one two";
+    grid-template-areas:
+    "one two";
   }
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1750px) {
     .page {
-    width: 85vw;
+    width: 65vw;
+    padding-top: 5.5rem;
   }
 }
 
