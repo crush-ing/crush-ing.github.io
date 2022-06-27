@@ -243,7 +243,7 @@ section#home {
   max-width: 100%;
 }
 
-#gallery img {
+#musicgallery img {
   padding-bottom: 10px;
 }
 
@@ -467,9 +467,16 @@ span[data-spell]:hover::after {
   }
   #gallery img {
     width: 85vw;
-    padding-bottom: 10px;
   }
-  .column {
-    padding-bottom: 10px;
+  #musicgallery {
+    display: inline-block;
+    width: 900px;
+    margin-left: -10px;
+  }
+  #musicgallery img {
+    width: 85vw;
+  }
+  #musicgallery .column {
+    padding-bottom: 50px;
   }
 }
