@@ -191,7 +191,7 @@ section#home {
 
 .skz-section {
   /*BACKGROUND*/
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+  background: #000
     url("assets/backgrounds/bg-skz.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
