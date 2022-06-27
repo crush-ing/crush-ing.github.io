@@ -243,6 +243,10 @@ section#home {
   max-width: 100%;
 }
 
+#gallery img {
+  padding-bottom: 10px;
+}
+
 /* ------- LIGHTBOX ------- */
 
 .lightbox {
@@ -430,14 +434,11 @@ span[data-spell]:hover::after {
     max-width: 100%;
     height: auto;
   }
-    #musicgallery img {
-    margin-bottom: 5px;
-  }
 }
 
 @media only screen and (max-width: 550px) {
-    #floatright,
-    #floatleft {
+  #floatright,
+  #floatleft {
       display: block;
       float: none;
       margin: auto;
@@ -455,5 +456,20 @@ span[data-spell]:hover::after {
 @media only screen and (max-width: 1500px) {
     .page {
     width: 85vw;
+  }
+}
+
+@media only screen and (min-device-width: 100px) and (max-device-width: 550px) {
+  #gallery {
+    display: inline-block;
+    width: 900px;
+    margin-left: -10px;
+  }
+  #gallery img {
+    width: 85vw;
+    padding-bottom: 10px;
+  }
+  .column {
+    padding-bottom: 10px;
   }
 }
