@@ -464,6 +464,7 @@ span[data-spell]:hover::after {
   .page img {
     max-width: 85vw;
     margin: auto;
+    padding-bottom: 15px;
   }
   #gallery,
   #musicgallery {
