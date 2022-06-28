@@ -427,7 +427,7 @@ span[data-spell]:hover::after {
   .page {
     margin: auto;
     width: 50vw;
-    padding-top: 4rem;
+    padding-top: 5rem;
     padding-bottom: 3rem;
   }
   img {
@@ -456,20 +456,25 @@ span[data-spell]:hover::after {
   }
 }
 
-@media only screen and (max-width: 1100px) {
-    .page {
-    width: 70vw;
-    padding-top: 5.5rem;
-  }
-}
-
 @media only screen and (min-device-width: 100px) and (max-device-width: 700px) {
+  .page {
+    width: 85vw;
+  }
+  .page img {
+    max-width: 85vw;
+    margin: auto;
+  }
   #gallery,
   #musicgallery {
     display: inline-block;
-    width: 100vw;
+    width: 620px;
+    margin-left: -10px;
+  }
+  #musicgallery img {
+    width: 85vw;
+    padding-bottom: 15px;
   }
   #musicgallery .column {
-    padding-bottom: 50px;
+    padding-bottom: 15px;
   }
 }
