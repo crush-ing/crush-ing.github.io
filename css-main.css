@@ -442,7 +442,7 @@ span[data-spell]:hover::after {
     display: block;
     float: none;
     margin: auto;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
   }
 }
 
