@@ -427,7 +427,7 @@ span[data-spell]:hover::after {
   .page {
     margin: auto;
     width: 50vw;
-    padding-top: 5rem;
+    padding-top: 3.5rem;
     padding-bottom: 3rem;
   }
   img {
@@ -458,6 +458,7 @@ span[data-spell]:hover::after {
 
 @media only screen and (min-device-width: 100px) and (max-device-width: 700px) {
   .page {
+    padding-top: 5rem;
     width: 85vw;
   }
   .page img {
