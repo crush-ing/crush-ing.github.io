@@ -456,32 +456,20 @@ span[data-spell]:hover::after {
   }
 }
 
-@media only screen and (max-width: 1750px) {
+@media only screen and (max-width: 1100px) {
     .page {
-    width: 65vw;
+    width: 70vw;
     padding-top: 5.5rem;
   }
 }
 
-@media only screen and (min-device-width: 100px) and (max-device-width: 550px) {
-  #gallery {
-    display: inline-block;
-    width: 900px;
-    margin-left: -10px;
-  }
-  #gallery img {
-    width: 85vw;
-  }
+@media only screen and (min-device-width: 100px) and (max-device-width: 700px) {
+  #gallery,
   #musicgallery {
     display: inline-block;
-    width: 900px;
-    margin-left: -10px;
-  }
-  #musicgallery img {
-    width: 86vw;
+    width: 100vw;
   }
   #musicgallery .column {
     padding-bottom: 50px;
-    width: 86vw;
   }
 }
