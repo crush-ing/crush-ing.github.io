@@ -437,6 +437,18 @@ span[data-spell]:hover::after {
     max-width: 100%;
     height: auto;
   }
+  .pet-table-column {
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+  }
+  .pet-table-row {
+    margin: auto;
+    display: flex;
+  }
+  .pet-table-row img {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 750px) {
@@ -456,6 +468,15 @@ span[data-spell]:hover::after {
   .profile-grid {
     grid-template-areas:
     "one two";
+  }
+  .pet-table-row {
+    width: 60%;
+  }
+  .pet-table-row#small {
+    width: 45%;
+  }
+  .pet-table-row#large {
+    width: 80%;
   }
 }
 
