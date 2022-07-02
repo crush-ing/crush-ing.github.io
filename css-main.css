@@ -428,7 +428,7 @@ span[data-spell]:hover::after {
     margin: auto;
     width: 50vw;
     padding-top: 3.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
   }
   img {
     max-width: 100%;
