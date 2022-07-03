@@ -478,6 +478,11 @@ span[data-spell]:hover::after {
   .pet-table-row#large {
     width: 80%;
   }
+  .small-desc {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
 }
 
 @media only screen and (min-device-width: 100px) and (max-device-width: 850px) {
@@ -502,5 +507,10 @@ span[data-spell]:hover::after {
   #musicgallery img {
     width: 85vw;
     padding-top: 15px;
+  }
+  .small-desc {
+    width: 100%;
+    margin: auto;
+    text-align: center;
   }
 }
