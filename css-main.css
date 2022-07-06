@@ -454,7 +454,7 @@ span[data-spell]:hover::after {
    'one'
    'two';
 
-  padding-block: 1.5rem;
+  padding-block: 1rem;
   width: min(100%, 55rem);
   margin-inline: auto;
 }
