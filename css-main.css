@@ -102,6 +102,7 @@ section {
   /*FONT*/
   font-family: "Montserrat", Verdana, sans-serif;
   font-size: 17px;
+  font-weight: normal;
   line-height: 1.3em;
   color: #fff;
   /*DISPLAY*/
@@ -290,34 +291,86 @@ section#home {
 
 /* ------- DROPDOWN ------- */
 
+:root {
+  --tree-nav-item-height: 1.4rem;
+  --tree-nav-item-margin-left: 2.2rem;
+  --tree-nav-item-padding-top: .3rem;
+}
+
 label {
-  color: #fff;
   font-weight: bold;
   cursor: pointer;
-  display: block;
-  width: fit-content;
 }
 
-label + input,
-label + input + small {
-  display: none;
+.tree-nav ul {
+  /* Reset */
+  list-style-type: none;
+  margin: 0;
 }
 
-input:checked + small {
-  display: block;
+.tree-nav li {
+  padding: var(--tree-nav-item-padding-top) 0rem 0rem .3rem;
+  position: relative;
 }
 
-label:before {
+.tree-nav li::before {
+  border-left: 1px solid rgb(255, 255, 255);
+  content: '';
+
+  /* Position */
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(calc(-1 * var(--tree-nav-item-margin-left)), 0);
+
+  /* Size */
+  height: 100%;
+}
+
+.tree-nav li::after {
+  border-bottom: 1px solid rgb(255, 255, 255);
+  content: '';
+
+  /* Position */
+  left: 0;
+  position: absolute;
+  top: calc(var(--tree-nav-item-padding-top) + var(--tree-nav-item-height) / 2);
+  transform: translate(-100%, 0);
+
+  /* Size */
+  width: var(--tree-nav-item-margin-left);
+}
+
+/* Remove the border from the last item */
+.tree-nav li:last-child::before {
+  height: calc(
+    var(--tree-nav-item-padding-top) + var(--tree-nav-item-height) / 2
+  );
+}
+
+.tree-section ul { 
+  display: none; 
+}
+
+.tree-section input:checked ~ ul { 
+  display: block; 
+}
+
+/* HIDE CHECKBOX */
+.tree-section input[type=checkbox] { 
+  display: none; 
+}
+
+h2.navhead {
   color: #fff;
-  content: "└ ";
 }
 
-/*label:after {content:"]";}*/
+h2.navhead a {
+  color: #fff;
+}
 
-small {
-  font-size: 17px;
-  padding-top: 1px;
-  margin-left: 1em;
+h2.navhead a:hover {
+  color: #fff;
 }
 
 /* ------- CODE BOX  ------- */
