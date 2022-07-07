@@ -304,6 +304,7 @@ section#home {
 label {
   font-weight: bold;
   cursor: pointer;
+  display: block;
   width: fit-content;
 }
 
