@@ -303,20 +303,20 @@ section#home {
 label {
   font-weight: bold;
   cursor: pointer;
-  display: block;
+    display: block;
   width: fit-content;
 }
 
 label + input,
-label + input + .expand {
+label + input + small {
   display: none;
 }
 
-input:checked + .expand {
+input:checked + small {
   display: block;
 }
 
-.expand {
+small {
   font-size: 17px;
   margin-top: 15px;
   margin-bottom: 15px;
