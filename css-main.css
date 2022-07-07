@@ -32,6 +32,12 @@ h3,
 h4 {
   color: #fff;
   font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.navhead {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 hr {
@@ -377,10 +383,6 @@ small {
 /* HIDE CHECKBOX */
 .tree-section input[type=checkbox] { 
   display: none; 
-}
-
-.navhead {
-  margin-bottom: 5px;
 }
 
 /* ------- CODE BOX  ------- */
