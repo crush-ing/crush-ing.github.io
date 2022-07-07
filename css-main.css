@@ -32,8 +32,6 @@ h3,
 h4 {
   color: #fff;
   font-size: 22px;
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 hr {
@@ -300,6 +298,26 @@ section#home {
 label {
   font-weight: bold;
   cursor: pointer;
+  width: fit-content;
+}
+
+label + input,
+label + input + small {
+  display: none;
+}
+
+input:checked + small {
+  display: block;
+}
+
+small {
+  font-size: 17px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 1px;
+  border: #fff 1px dashed;
+  border-radius: 5px;
+  padding: 30px;
 }
 
 .tree-nav ul {
@@ -361,16 +379,8 @@ label {
   display: none; 
 }
 
-h2.navhead {
-  color: #fff;
-}
-
-h2.navhead a {
-  color: #fff;
-}
-
-h2.navhead a:hover {
-  color: #fff;
+.navhead {
+  margin-bottom: 5px;
 }
 
 /* ------- CODE BOX  ------- */
