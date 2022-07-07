@@ -308,15 +308,15 @@ label {
 }
 
 label + input,
-label + input + small {
+label + input + .expand {
     display: none;
 }
 
-input:checked + small {
+input:checked + .expand {
     display: block;
 }
 
-small {
+.expand {
     font-size: 17px;
     margin-top: 15px;
     margin-bottom: 15px;
