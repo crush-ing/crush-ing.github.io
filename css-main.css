@@ -530,6 +530,13 @@ span[data-spell]:hover::after {
     }
 }
 
+@media screen and (max-width: 410px) {
+    .mixie img {
+        display: block;
+        margin: auto;
+    }
+}
+
 @media screen and (min-width: 1000px) {
     .page {
         width: 50vw;
@@ -563,23 +570,15 @@ span[data-spell]:hover::after {
         padding-top: 5rem;
         width: 85vw;
     }
-    .page img {
+    .page #gallery {
+        width: 600px;
+    }
+    .page #gallery img {
         max-width: 85vw;
         margin: auto;
-    }
-    .row img {
-        padding-bottom: 15px;
-    }
-    #gallery,
-    #musicgallery {
-        display: inline-block;
-        width: 620px;
-        margin-left: -5px;
-    }
-    #gallery,
-    #musicgallery img {
-        width: 85vw;
+        margin-left: -10px;
         padding-top: 15px;
+        padding-bottom: 10px;
     }
     .small-desc {
         width: 100%;
