@@ -223,9 +223,10 @@ section#home {
 /* ------- IMAGES ------- */
 
 .thumb img {
-    height: 550px;
-    width: 500px;
+    height: 200px;
+    width: 150px;
     object-fit: cover;
+    display: inline-block;
 }
 
 .row {
@@ -570,9 +571,9 @@ span[data-spell]:hover::after {
         padding-top: 5rem;
         width: 85vw;
     }
-    .page #gallery {
+    /* .page #gallery {
         width: 600px;
-    }
+    } */
     .page #gallery img {
         max-width: 85vw;
         margin: auto;
