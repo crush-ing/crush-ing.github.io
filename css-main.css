@@ -327,6 +327,55 @@ input:checked + .expand {
     padding: 30px;
 }
 
+/* ---- NON EXPANDING TREE ----*/
+
+ul {
+    /* Reset */
+    list-style-type: none;
+    margin: 0;
+}
+
+li {
+    padding: var(--tree-nav-item-padding-top) 0rem 0rem .3rem;
+    position: relative;
+}
+
+li::before {
+    border-left: 1px solid rgb(255, 255, 255);
+    content: '';
+
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: translate(calc(-1 * var(--tree-nav-item-margin-left)), 0);
+
+    /* Size */
+    height: 100%;
+}
+
+li::after {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    content: '';
+
+    /* Position */
+    left: 0;
+    position: absolute;
+    top: calc(var(--tree-nav-item-padding-top) + var(--tree-nav-item-height) / 2);
+    transform: translate(-100%, 0);
+
+    /* Size */
+    width: var(--tree-nav-item-margin-left);
+}
+
+li:last-child::before {
+    height: calc(
+        var(--tree-nav-item-padding-top) + var(--tree-nav-item-height) / 2
+    );
+}
+
+/* ---- EXPANDING TREE ----*/
+
 .tree-nav ul {
     /* Reset */
     list-style-type: none;
@@ -577,7 +626,7 @@ span[data-spell]:hover::after {
     .page #gallery img {
         max-width: 85vw;
         margin: auto;
-        margin-left: -10px;
+        margin-left: -5px;
         padding-top: 15px;
         padding-bottom: 10px;
     }
