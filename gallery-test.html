@@ -1,256 +1,239 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GALLERY</title>
 
-        <style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Heebo:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
-            * {
-                box-sizing: border-box;
-            }
-
-            html {
-                overflow: scroll;
-                overflow-x: hidden;
-            }
-
-            body {
-                background-color: #f1f1f1;
-                padding: 20px;
-                font-family: Arial;
-            }
-
-            h1 {
-                font-size: 50px;
-                word-break: break-all;
-            }
-
-            /* ----- GALLERY -----*/
-
-            img {
-                height: 300px;
-                max-width: 100%;
-                object-fit: cover;
-            }
-
-            .main {
-                max-width: 1000px;
-                margin: auto;
-            }
-
-            .column {
-                float: left;
-                width: 33.33%;
-                display: none; /* hide all elements by default */
-            }
-
-            .content {
-                background-color: white;
-                padding: 10px 10px 5px 10px;
-            }
-
-            .show {
-                display: block; /* added to filtered elements */
-            }
-
-            /* ----- BUTTONS ----- */
-
-            .btn {
-                text-align: left;
-                border: none;
-                margin-bottom: 5px;
-                outline: 5px 15px;
-                background-color: white;
-                cursor: pointer;
-            }
-
-            .btn:hover {
-                background-color: #ddd;
-            }
-
-            .btn.active {
-                background-color: #666;
-                color: white;
-            }
-
-            /* ----- TAGS & SEARCH ----- */
-
-            #tags {
-                padding: 10px 0px 10px 0px;
-            }
-
-            #tag-search {
-                height: 0;
-                visibility: hidden;
-            }
-
-            #search-bar {
-                font-size: 17px;
-                color: rgb(0, 0, 0);
-                background: transparent;
-                width: 100%;
-                padding: 12px 20px 12px 10px;
-                border: 1px solid rgb(0, 0, 0);
-                margin-bottom: 12px;
-            }
-
-        </style>
-
+    <link rel="stylesheet" href="gallery-test.css">
     </head>
 
     <body>
+        <main>
 
-        <div class="main">
+            <div class="container">
 
-            <h1>GALLERY TEST</h1>
+                <h1>Gallery</h1>
 
-            <!-- SEARCH BAR -->
-            <input style="box-sizing:border-box;" type="text" id="search-bar" onkeyup="myFunction()" placeholder="Search..." title="Search Tags"><br>
+                <!-- <input style="box-sizing:border-box;" type="text" id="tag-search" onkeyup="myFunction()" placeholder="Search..." title="Search Tags"><br> -->
 
-                <!--
-                SEARCH ISSUES
-                Text in tag-search can only be searched in the order that it's written.
-                Any way to search the filterSelection tags in any order, instead of having to copy everything into a separate div?
-                Original code: https://www.w3schools.com/howto/howto_js_filter_lists.asp
-                Possible solution? https://stackoverflow.com/questions/60657081/search-filter-list-irrespective-of-word-order-issue-with-search-strictness
-                -->
+                <!--CATEGORIES ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
 
-            <h2>TAGS</h2>
+                <h2>Categories</h2>
 
-            <!-- TAG SELECTION -->
-            <div id="tag-select">
+                <div class="filter">
 
-                <div style="margin-left:2em;width:80%;">
-                        <button class="btn active" onclick="filterSelection('all')">#all</button>
-                    <h3>Character</h3>
-                        <button class="btn" onclick="filterSelection('eclair')">#eclair</button>
-                        <button class="btn" onclick="filterSelection('papaya')">#papaya</button>
-                    <h3>Form</h3>
-                        <button class="btn" onclick="filterSelection('feral')">#feral</button>
-                        <button class="btn" onclick="filterSelection('human')">#human</button>
+                    <div class="options">
+                        <label><input type="radio" name="operation" value="union" id="op-union" checked>Inclusive</label>
+                        <label><input type="radio" name="operation" value="intersection" id="op-inter">Exclusive</label>
+                    </div>
+
+                    <h3>Animal</h3>
+
+                    <div class="categories">
+                        <div class="filter__checkbox"><span class="category"><input type="checkbox" value="dog" id="cat-dog"><label for="cat-dog">dog</label></span></div>
+                        <div class="filter__checkbox"><span class="category"><input type="checkbox" value="bear" id="cat-bear"><label for="cat-bear">bear</label></span></div>
+                        <div class="filter__checkbox"><span class="category"><input type="checkbox" value="bird" id="cat-bird"><label for="cat-bird">bird</label></span></div>
+                        <div class="filter__checkbox"><span class="category"><input type="checkbox" value="walrus" id="cat-walrus"><label for="cat-walrus">walrus</label></span></div>
+                        <div class="filter__checkbox"><span class="category"><input type="checkbox" value="cow" id="cat-cow"><label for="cat-cow">cow</label></span></div>
+                    </div>
+
+                    <h3>Color</h3>
+
+                    <div class="categories">
+                        <div class="filter__checkbox"><span class="category"><input type="checkbox" value="brown" id="cat-brown"><label for="cat-brown">brown</label></span></div>
+                        <div class="filter__checkbox"><span class="category"><input type="checkbox" value="tan" id="cat-tan"><label for="cat-tan">tan</label></span></div>
+                        <div class="filter__checkbox"><span class="category"><input type="checkbox" value="black" id="cat-black"><label for="cat-black">black</label></span></div>
+                    </div>
+
+                </div><br>
+
+                <!--GALLERY GRID ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+                <div class="gallery-grid">
+
+                    <div class="card stacked filterDiv bird brown">
+                            <!--<h2 class="card__title">Title</h2>-->
+                            <a href="https://picsum.photos/id/1024/700/700" target="_blank">
+                                <img class="card__img" src="https://picsum.photos/id/1024/700/700" alt="" width="" height="" loading="lazy">
+                            </a>
+                        <div class="card__content">
+                            <div id="tag">bird</div>
+                            <div id="tag">brown</div>
+                        </div>
+                    </div>
+
+                    <div class="card stacked filterDiv dog tan">
+                            <!--<h2 class="card__title">Title</h2>-->
+                            <a href="https://picsum.photos/id/1025/700/700" target="_blank">
+                                <img class="card__img" src="https://picsum.photos/id/1025/700/700" alt="" width="" height="" loading="lazy">
+                            </a>
+                        <div class="card__content">
+                            <div id="tag">dog</div>
+                            <div id="tag">tan</div>
+                        </div>
+                    </div>
+
+                    <div class="card stacked filterDiv walrus brown">
+                            <!--<h2 class="card__title">Title</h2>-->
+                            <a href="https://picsum.photos/id/1084/700/700" target="_blank">
+                                <img class="card__img" src="https://picsum.photos/id/1084/700/700" alt="" width="" height="" loading="lazy">
+                            </a>
+                        <div class="card__content">
+                            <div id="tag">walrus</div>
+                            <div id="tag">brown</div>
+                        </div>
+                    </div>
+
+                    <div class="card stacked filterDiv dog brown">
+                            <!--<h2 class="card__title">Title</h2>-->
+                            <a href="https://picsum.photos/id/169/700/700" target="_blank">
+                                <img class="card__img" src="https://picsum.photos/id/169/700/700" alt="" width="" height="" loading="lazy">
+                            </a>
+                        <div class="card__content">
+                            <div id="tag">dog</div>
+                            <div id="tag">brown</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card stacked filterDiv cow brown">
+                            <!--<h2 class="card__title">Title</h2>-->
+                            <a href="https://picsum.photos/id/200/700/700" target="_blank">
+                                <img class="card__img" src="https://picsum.photos/id/200/700/700" alt="" width="" height="" loading="lazy">
+                            </a>
+                        <div class="card__content">
+                            <div id="tag">cow</div>
+                            <div id="tag">brown</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card stacked filterDiv dog black">
+                            <!--<h2 class="card__title">Title</h2>-->
+                            <a href="https://picsum.photos/id/237/700/700" target="_blank">
+                                <img class="card__img" src="https://picsum.photos/id/237/700/700" alt="" width="" height="" loading="lazy">
+                            </a>
+                        <div class="card__content">
+                            <div id="tag">dog</div>
+                            <div id="tag">black</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card stacked filterDiv bear brown">
+                            <!--<h2 class="card__title">Title</h2>-->
+                            <a href="https://picsum.photos/id/433/700/700" target="_blank">
+                                <img class="card__img" src="https://picsum.photos/id/433/700/700" alt="" width="" height="" loading="lazy">
+                            </a>
+                        <div class="card__content">
+                            <div id="tag">bear</div>
+                            <div id="tag">brown</div>
+                        </div>
+                    </div>
+
+                    <div class="card stacked filterDiv bird white">
+                            <!--<h2 class="card__title">Title</h2>-->
+                            <a href="https://picsum.photos/id/275/700/700" target="_blank">
+                                <img class="card__img" src="https://picsum.photos/id/275/700/700" alt="" width="" height="" loading="lazy">
+                            </a>
+                        <div class="card__content">
+                            <div id="tag">bird</div>
+                            <div id="tag">white</div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!--
-                TAG SELECTION ISSUES
-                Can only select one tag at a time.
-                Original code: https://www.w3schools.com/howto/howto_js_portfolio_filter.asp
-                -->
+            </div>
 
-            </div><br>
-
-            <!--GALLERY ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
-
-            <table id="dir">
-
-                <tr class="column eclair feral">
-                    <td class="content">
-                        <a href="assets/petz/art/my-petz/petz-eclair1.png" target="_blank">
-                            <img src="assets/petz/art/my-petz/petz-eclair1.png" alt="" width="1544" height="1762" loading="lazy">
-                        </a>
-                        <div id="tag-search">eclair feral</div>
-                        <div id="tags">
-                            <button class="btn" onclick="filterSelection('eclair')">#eclair</button>
-                            <button class="btn" onclick="filterSelection('feral')">#feral</button>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="column eclair human">
-                    <td class="content">
-                        <a href="assets/petz/art/my-petz/petz-eclair-human1.png" target="_blank">
-                            <img src="assets/petz/art/my-petz/petz-eclair-human1.png" alt="" width="978" height="1197" loading="lazy">
-                        </a>
-                        <div id="tag-search">eclair human</div>
-                        <div id="tags">
-                            <button class="btn" onclick="filterSelection('eclair')">#eclair</button>
-                            <button class="btn" onclick="filterSelection('human')">#human</button>
-                        </div>
-                    </td>
-                </tr>
-
-                <tr class="column papaya feral">
-                    <td class="content">
-                        <a href="assets/petz/art/my-petz/petz-papaya-1.png" target="_blank">
-                            <img src="assets/petz/art/my-petz/petz-papaya-1.png" alt="" width="900" height="500" loading="lazy">
-                        </a>
-                        <div id="tag-search">papaya feral</div>
-                        <div id="tags">
-                            <button class="btn" onclick="filterSelection('papaya')">#papaya</button>
-                            <button class="btn" onclick="filterSelection('feral')">#feral</button>
-                        </div>
-                    </td>
-                </tr>
-
-            </table>
-
-        </div>
+        </main>
 
         <script>
 
-        // TAG SELECTION
+            // CHECKBOX SELECTION
 
-        filterSelection("all")
-        function filterSelection(c) {
-            var x, i;
-            x = document.getElementsByClassName("column");
-            if (c == "all") c = "";
-            for (i = 0; i < x.length; i++) {
-            w3RemoveClass(x[i], "show");
-            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            var checkboxes = document.querySelectorAll(".categories input");
+            for(var i = 0; i < checkboxes.length; i++) {
+                checkboxes[i].addEventListener("change", filter);
             }
-        }
-
-        function w3AddClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            var radios = document.getElementsByName("operation");
+            for(var i = 0; i < radios.length; i++) {
+                radios[i].addEventListener("change", filter);
             }
-        }
+            filter();
+            function filter() {
+                var i, j;
 
-        function w3RemoveClass(element, name) {
-            var i, arr1, arr2;
-            arr1 = element.className.split(" ");
-            arr2 = name.split(" ");
-            for (i = 0; i < arr2.length; i++) {
-            while (arr1.indexOf(arr2[i]) > -1) {
-                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                // Choose an operation
+                var operation = document.getElementById("op-union").checked ? "union" : "intersection";
+
+                // Get the selected categories
+                var checkboxes = document.querySelectorAll(".categories input");
+                var categories = [];
+                var c;
+                for(i = 0; i < checkboxes.length; i++) {
+                if(checkboxes[i].checked) {
+                    c = checkboxes[i].value;
+                    categories.push(c);
+                    }
+                }
+
+                // Apply the filter
+                var items = document.querySelectorAll(".filterDiv");
+                items.forEach(item=>item.style.display='block')
+                var item, show;
+                for(i = 0; i < items.length; i++) {
+                item = items[i];
+                if(categories.length == 0) {
+                show = true;
+
+                } else if(operation == "union") {
+                // Union: Only one of the categories must apply
+
+                show = false;
+                for(j = 0; j < categories.length; j++) {
+                if(item.classList.contains(categories[j])) {
+                    show = true;
+                    break;
+                    }
+                }
+                if(!show) {
+                    item.style.display="none";
+                }
+                } else {
+                    //  console.log(operation)
+                    // Intersection: All of the categories must apply
+                    show = true;
+                    for(j = 0; j < categories.length; j++) {
+                        if(!item.classList.contains(categories[j])) {
+                            item.style.display="none";
+                            break;
+                            }
+                        }
+                    }
+                }
             }
-            }
-            element.className = arr1.join(" ");
-        }
 
-        // Add active class to the current button (highlight it)
-        var btnContainer = document.getElementById("tag-select");
-        var btns = btnContainer.getElementsByClassName("btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].addEventListener("click", function(){
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
-                this.className += " active";
-        });
-        }
+            // TAG SEARCH
 
-        // TAG SEARCH
-
-        function myFunction() {
-            var input, filter, table, tr, td, i, txtValue;
-            input = document.getElementById("search-bar");
-            filter = input.value.toUpperCase();
-            table = document.getElementById("dir");
-            tr = table.getElementsByTagName("tr");
-            for (i = 0; i < tr.length; i++) 
-            {td = tr[i].getElementsByTagName("td")[0];
-            if (td) {
-                txtValue = td.textContent || td.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) 
-                {tr[i].style.display = "";} 
-                else {tr[i].style.display = "none";}
-                }}
-        }
+            // function myFunction() {
+            // var input = document.getElementById("tag-search");
+            // var filter = input.value.toLowerCase();
+            // var nodes = document.getElementsByClassName('target-div');
+            // for (i = 0; i < nodes.length; i++) {
+            //         if (nodes[i].innerText.toLowerCase().includes(filter)) {
+            //         nodes[i].style.display = "block";
+            //         } else {
+            //         nodes[i].style.display = "none";
+            //         }
+            //     }
+            // }
 
         </script>
 
