@@ -174,30 +174,7 @@ body {
   font-weight: bold;
 }
 
-#tag-search {
-  font-size: 17px;
-  color: rgb(0, 0, 0);
-  background: transparent;
-  width: 100%;
-  padding: .5em 0em .5em 0em;
-  border: 2px solid rgb(0, 0, 0);
-  margin-bottom: 12px;
-}
-
 @media (max-width: 60em) {
-
-  /* .card.featured {
-    grid-row: span 2;
-    grid-column: span 2;
-  }
-
-  .card.featured .card__img {
-    aspect-ratio: 1 / 1.25;
-  }
-
-  .card.featured .card__title {
-    font-size: 1.75rem;
-  } */
 
   .card__img {
     aspect-ratio: 1 / 1;
