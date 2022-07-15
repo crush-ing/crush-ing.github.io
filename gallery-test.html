@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                overflow: scroll;
+                overflow-x: hidden;
+            }
+
+            body {
+                background-color: #f1f1f1;
+                padding: 20px;
+                font-family: Arial;
+            }
+
+            h1 {
+                font-size: 50px;
+                word-break: break-all;
+            }
+
+            /* ----- GALLERY -----*/
+
+            img {
+                height: 300px;
+                max-width: 100%;
+                object-fit: cover;
+            }
+
+            .main {
+                max-width: 1000px;
+                margin: auto;
+            }
+
+            .column {
+                float: left;
+                width: 33.33%;
+                display: none; /* hide all elements by default */
+            }
+
+            .content {
+                background-color: white;
+                padding: 10px 10px 5px 10px;
+            }
+
+            .show {
+                display: block; /* added to filtered elements */
+            }
+
+            /* ----- BUTTONS ----- */
+
+            .btn {
+                text-align: left;
+                border: none;
+                margin-bottom: 5px;
+                outline: 5px 15px;
+                background-color: white;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background-color: #ddd;
+            }
+
+            .btn.active {
+                background-color: #666;
+                color: white;
+            }
+
+            /* ----- TAGS & SEARCH ----- */
+
+            #tags {
+                padding: 10px 0px 10px 0px;
+            }
+
+            #tag-search {
+                height: 0;
+                visibility: hidden;
+            }
+
+            #search-bar {
+                font-size: 17px;
+                color: rgb(0, 0, 0);
+                background: transparent;
+                width: 100%;
+                padding: 12px 20px 12px 10px;
+                border: 1px solid rgb(0, 0, 0);
+                margin-bottom: 12px;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="main">
+
+            <h1>GALLERY TEST</h1>
+
+            <!-- SEARCH BAR -->
+            <input style="box-sizing:border-box;" type="text" id="search-bar" onkeyup="myFunction()" placeholder="Search..." title="Search Tags"><br>
+
+                <!--
+                SEARCH ISSUES
+                Text in tag-search can only be searched in the order that it's written.
+                Any way to search the filterSelection tags in any order, instead of having to copy everything into a separate div?
+                Possible solution? https://stackoverflow.com/questions/60657081/search-filter-list-irrespective-of-word-order-issue-with-search-strictness
+                -->
+
+            <h2>TAGS</h2>
+
+            <!-- TAG SELECTION -->
+            <div id="tag-select">
+
+                <div style="margin-left:2em;width:80%;">
+                        <button class="btn active" onclick="filterSelection('all')">#all</button>
+                    <h3>Character</h3>
+                        <button class="btn" onclick="filterSelection('eclair')">#eclair</button>
+                        <button class="btn" onclick="filterSelection('papaya')">#papaya</button>
+                    <h3>Form</h3>
+                        <button class="btn" onclick="filterSelection('feral')">#feral</button>
+                        <button class="btn" onclick="filterSelection('human')">#human</button>
+                </div>
+
+                <!--
+                TAG SELECTION ISSUES
+                Can only select one tag at a time.
+                -->
+
+            </div><br>
+
+            <!--GALLERY ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo-->
+
+            <table id="dir">
+
+                <tr class="column eclair feral">
+                    <td class="content">
+                        <a href="https://crush-ing.github.io/assets/petz/art/my-petz/petz-eclair1.png" target="_blank">
+                            <img src="https://crush-ing.github.io/assets/petz/art/my-petz/petz-eclair1.png" alt="" width="1544" height="1762" loading="lazy">
+                        </a>
+                        <div id="tag-search">eclair feral</div>
+                        <div id="tags">
+                            <button class="btn" onclick="filterSelection('eclair')">#eclair</button>
+                            <button class="btn" onclick="filterSelection('feral')">#feral</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="column eclair human">
+                    <td class="content">
+                        <a href="https://crush-ing.github.io/assets/petz/art/my-petz/petz-eclair-human1.png" target="_blank">
+                            <img src="https://crush-ing.github.io/assets/petz/art/my-petz/petz-eclair-human1.png" alt="" width="978" height="1197" loading="lazy">
+                        </a>
+                        <div id="tag-search">eclair human</div>
+                        <div id="tags">
+                            <button class="btn" onclick="filterSelection('eclair')">#eclair</button>
+                            <button class="btn" onclick="filterSelection('human')">#human</button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr class="column papaya feral">
+                    <td class="content">
+                        <a href="https://crush-ing.github.io/assets/petz/art/my-petz/petz-papaya-1.png" target="_blank">
+                            <img src="https://crush-ing.github.io/assets/petz/art/my-petz/petz-papaya-1.png" alt="" width="900" height="500" loading="lazy">
+                        </a>
+                        <div id="tag-search">papaya feral</div>
+                        <div id="tags">
+                            <button class="btn" onclick="filterSelection('papaya')">#papaya</button>
+                            <button class="btn" onclick="filterSelection('feral')">#feral</button>
+                        </div>
+                    </td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <script>
+
+        // TAG SELECTION
+
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("tag-select");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+        });
+        }
+
+        // TAG SEARCH
+
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("search-bar");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("dir");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) 
+            {td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) 
+                {tr[i].style.display = "";} 
+                else {tr[i].style.display = "none";}
+                }}
+        }
+
+        </script>
+
+    </body>
+
+</html>
