@@ -36,7 +36,7 @@
           <h1 class="title">Microblog</h1>
           
           <xsl:for-each select="item">
-              <h3><xsl:value-of select="title" /></h3>
+              <!-- <h3><xsl:value-of select="title" /></h3> -->
               <div class="box">
                 <p class="pubDate"><xsl:value-of select="pubDate" /></p>
                 <hr class="weak"/>
