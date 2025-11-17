@@ -33,7 +33,7 @@
 
         <div class="container">
 
-          <h1 class="title">RSS</h1>
+          <h1 class="title">Microblog</h1>
           
           <xsl:for-each select="item">
               <h3><xsl:value-of select="title" /></h3>
