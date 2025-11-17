@@ -39,6 +39,7 @@
               <h3><xsl:value-of select="title" /></h3>
               <div class="box">
                 <p class="pubDate"><xsl:value-of select="pubDate" /></p>
+                <hr class="solid"/>
                 <p><xsl:value-of select="description" disable-output-escaping="yes" /></p>
               </div>
           </xsl:for-each>
